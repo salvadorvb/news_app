@@ -13,7 +13,7 @@ class ApiKeyInvalidException implements Exception{}
 class NewsProvider{
   static const String _apiKey = "3c4e0d9f85294374b8070f84753e6785";
   static const String _baseURL = "newsapi.org";
-  static const String _topHeadLines = "/v2/everything";
+  static const String _topHeadLines = "/v2/top-headlines";
 
   late final http.Client _httpClient;
 

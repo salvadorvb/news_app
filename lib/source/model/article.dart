@@ -4,13 +4,13 @@ import 'package:json_annotation/json_annotation.dart';
 part 'article.g.dart';
 
 @JsonSerializable()
-class Article{
+class Article extends Equatable{
   late final String title;
   late final String? author;
   late final String? description;
   late final String? urlImage;
   late final String? content;
-  late final String? url;
+  late final String url;
 
   Article({
     required this.title,
