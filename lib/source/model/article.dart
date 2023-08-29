@@ -12,7 +12,13 @@ class Article{
   late final String? content;
   late final String? url;
 
-  Article();
+  Article({
+    required this.title,
+    this.author,
+    this.urlImage,
+    this.description,
+    this.content,
+  });
 
   factory Article.fromJson(Map<String, dynamic> json) => _$ArticleFromJson(json);
   Map<String, dynamic> toJson() => _$ArticleToJson(this);
