@@ -61,7 +61,7 @@ class _ListItem extends StatelessWidget {
         child: Column(
           children: [
             article.urlImage == null
-                ? Container(color: Colors.red, height: 250)
+                ? Container(color: Colors.lightBlue, height: 250)
                 : CachedNetworkImage(
               imageUrl: article.urlImage!,
               placeholder: (context, url) => CircularProgressIndicator(),
