@@ -22,10 +22,10 @@ class NewsDetailScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          article.urlImage == null
+          article.urlToImage == null
               ? Container(color: Colors.lightBlue, height: 250)
               : CachedNetworkImage(
-            imageUrl: article.urlImage!,
+            imageUrl: article.urlToImage!,
             placeholder: (context, url) => CircularProgressIndicator(),
             errorWidget: (context, url, error) => Icon(Icons.error),
           ),
@@ -37,7 +37,7 @@ class NewsDetailScreen extends StatelessWidget {
           Text('${article.content}'),
           SizedBox(height: 8),
           ElevatedButton(
-            onPressed: () => launchUrlString(article.url),
+            onPressed: () => launchUrlString(article.url!),
             child: Text('Ver mas'),
           ),
           SizedBox(height: 16),

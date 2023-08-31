@@ -60,12 +60,31 @@ class _ListItem extends StatelessWidget {
         margin: EdgeInsets.all(8),
         child: Column(
           children: [
-            article.urlImage == null
-                ? Container(color: Colors.lightBlue, height: 250)
-                : CachedNetworkImage(
-              imageUrl: article.urlImage!,
-              placeholder: (context, url) => CircularProgressIndicator(),
-              errorWidget: (context, url, error) => Icon(Icons.error),
+            Stack(
+              children: [
+                article.urlToImage == null
+                    ? Container(color: Colors.lightBlue, height: 250)
+                    : CachedNetworkImage(
+                  imageUrl: article.urlToImage!,
+                  placeholder: (context, url) => CircularProgressIndicator(),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
+                Positioned(
+                  top: 8,
+                  right: 8,
+                  child: GestureDetector(
+                    onTap: () {
+                      // Aquí puedes agregar la lógica para marcar como favorito
+                      // cuando el usuario toque el icono de favorito.
+                    },
+                    child: const Icon(
+                      Icons.favorite_border, // Icono de favorito
+                      color: Colors.red, // Color del icono
+                      size: 24, // Tamaño del icono
+                    ),
+                  ),
+                ),
+              ],
             ),
             Text(
               '${article.title}',
@@ -77,6 +96,7 @@ class _ListItem extends StatelessWidget {
             SizedBox(height: 16),
           ],
         ),
+
       ),
     );
   }

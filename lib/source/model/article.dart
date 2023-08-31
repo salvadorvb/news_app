@@ -5,17 +5,17 @@ part 'article.g.dart';
 
 @JsonSerializable()
 class Article extends Equatable{
-  late final String title;
+  late final String? title;
   late final String? author;
   late final String? description;
-  late final String? urlImage;
+  late final String? urlToImage;
   late final String? content;
-  late final String url;
+  late final String? url;
 
   Article({
     required this.title,
     this.author,
-    this.urlImage,
+    this.urlToImage,
     this.description,
     this.content,
   });
