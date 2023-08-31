@@ -73,8 +73,8 @@ lib/source
 ```
 ## Screenshots
 <div >
-<img src="https://github.com/salvadorvb/news_app/tree/main/images/home_list.png?raw=true" width="250" style="border: 1px solid black"/> &nbsp &nbsp
-<img src="https://github.com/salvadorvb/news_app/tree/main/images/images/detail.png?raw=true" width="250" style="border: 1px solid black"/>&nbsp 
+<img src="https://github.com/salvadorvb/news_app/blob/main/images/home_list.png?raw=true" width="250" style="border: 1px solid black"/> &nbsp &nbsp
+<img src="https://github.com/salvadorvb/news_app/blob/main/images/images/detail.png?raw=true" width="250" style="border: 1px solid black"/>&nbsp 
 &nbsp
 <img src="https://github.com/salvadorvb/news_app/tree/main/images/images/web.png?raw=true" width="250" style="border: 1px solid black"/>
 </div>
