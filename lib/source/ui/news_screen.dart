@@ -4,6 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/source/provider/favorite_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../bloc/news_cubit.dart';
 import '../model/article.dart';
@@ -54,6 +56,7 @@ class _ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final favProvider = Provider.of<FavoriteProvider>(context);
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, Routes.newsDetails, arguments: article),
       child: Card(
@@ -74,14 +77,18 @@ class _ListItem extends StatelessWidget {
                   right: 8,
                   child: GestureDetector(
                     onTap: () {
-                      // Aquí puedes agregar la lógica para marcar como favorito
-                      // cuando el usuario toque el icono de favorito.
+                      favProvider.toggleFavorite(article);
+
                     },
-                    child: const Icon(
+                    child: favProvider.isExist(article) ? const Icon(
+                      Icons.favorite, // Icono de favorito
+                      color: Colors.red, // Color del icono
+                      size: 24, // Tamaño del icono
+                    ) : const Icon(
                       Icons.favorite_border, // Icono de favorito
                       color: Colors.red, // Color del icono
                       size: 24, // Tamaño del icono
-                    ),
+                    )
                   ),
                 ),
               ],
