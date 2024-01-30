@@ -17,7 +17,7 @@ The news_app contains the minimal implementation required to run a project.
 Download or clone this repo by using the link below:
 
 ```
-https://github.com/zubairehman/news_app.git
+[https://github.com/zubairehman/news_app.git](https://github.com/salvadorvb/news_app)
 ```
 
 **Step 2:**
